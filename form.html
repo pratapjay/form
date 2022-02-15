@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="js.index.js">
+</head>
+<body>
+    <form action="#" autocomplete="off" onsubmit=" return validation()">
+        <table cellspacing="15;" align="center">
+            <tr><td><input type="text" id="user" placeholder="Enter Your Name">
+               <br><span id="userr"></span>
+            </td></tr>
+            <tr><td><input type="text" id="mobile" placeholder="Enter Mobile Number">
+                <br><span id="mobilee"></span>
+            </td></tr>
+            <tr><td><input type="email" id="email" placeholder="Enter Your Email">
+                <br><span id="emaill"></span>
+            </td></tr>
+            <tr><td><input type="text" id="age" placeholder="Enter your Age">
+                <br><span id="agee"></span>
+            </td></tr>
+            <tr><td><input type="submit" id="btn" placeholder=""></td></tr>
+            <tr><td><input type="reset" id="btn" placeholder=""></td></tr>
+        </table>
+    </form>
+    <script>
+        function validation()
+   {
+    var user = document.getElementById('user').value;
+    var mobile = document.getElementById('mobile').value;
+    var email = document.getElementById('email').value;
+    var age = document.getElementById('age').value;
+    if(user == "")
+    {
+        document.getElementById('userr').innerHTML="**Please write your name**";
+        return false;
+    } 
+    if(user.length<4)
+        {
+            document.getElementById('userr').innerHTML="**Please write more than four character in the box**";
+        return false;
+        }
+        if(!isNaN(user))
+        {
+            document.getElementById('userr').innerHTML="**Please write alphabet only in the box**";
+        return false;
+        }
+        else{
+            document.getElementById('userr').innerHTML="";
+        }
+    if(mobile == "")
+    {
+        document.getElementById('mobilee').innerHTML="**Please write your mobile**";
+    }
+    if(mobile.length<10)
+        {
+            document.getElementById('mobilee').innerHTML="**Please write 10digit number in the box**";
+        return false;
+        }
+        if(mobile.length>10)
+        {
+            document.getElementById('mobilee').innerHTML="**Please write 10digit number in the box**";
+        return false;
+        }
+        if(isNaN(mobile))
+        {
+            document.getElementById('mobilee').innerHTML="**Please write numbers only in the box**";
+        return false;
+        }
+        else{
+            document.getElementById('mobilee').innerHTML="";
+        }
+    if(email == "")
+    {
+        document.getElementById('emaill').innerHTML="**Please write your email**";
+    }
+    else{
+        document.getElementById('emaill').innerHTML="";
+    }
+    if(age == "")
+    {
+        document.getElementById('agee').innerHTML="**Please write your age**";
+    }
+    if(age<18)
+    {
+        document.getElementById('agee').innerHTML="**minimum 18year**";
+    }
+        else{
+            document.getElementById('agee').innerHTML="";
+        }
+}
+    </script>
+</body>
+</html>

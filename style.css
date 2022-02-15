@@ -1,0 +1,21 @@
+input{
+    width: 600px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid blue;
+    font-size: 20px;
+}
+#btn{
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    border-radius: 0px 50px;
+}
+#btn:hover
+{
+   background-color: red;
+}
+span{
+    color: red;
+    font-size: 20px;
+       }
